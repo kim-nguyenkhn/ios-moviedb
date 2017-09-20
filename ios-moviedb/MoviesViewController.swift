@@ -49,7 +49,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
                 if let data = data {
                     if let responseDictionary = try! JSONSerialization.jsonObject(
                         with: data, options:[]) as? NSDictionary {
-                        // print("responseDictionary: \(responseDictionary)")
+                         print("responseDictionary: \(responseDictionary)")
                         
                         // in the moviesDB payload, we want to drill down to the "results" key
                         self.movies = responseDictionary["results"] as? [NSDictionary]
